@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
+:root {
+  font-family: "Montserrat", sans-serif;
+  --min-margin: 7vw;
+}
+
+a:any-link,
+a:-webkit-any-link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+}
+
+header.cabecera-principal {
+  height: 100%;
+  height: auto;
+  background-color: #9da65d;
+}
+
+div.logo-contenedor {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img.logo-imagen {
+  height: 91%;
+  object-fit: contain;
+}
+
+nav.nav-principal {
+  height: 6vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav.nav-principal ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  width: auto;
+  padding-inline-start: var(--min-margin);
+}
+
+nav.nav-principal li {
+  padding: 0%;
+  height: 100%;
+  margin: 0% 1em;
+}
+
+section#contenido-principal {
+  min-height: 40vh;
+  display: flex;
+  justify-content: center;
+  padding: 3em 0em;
+}
+
+header.cabecera-principal a:-webkit-any-link,
+header.cabecera-principal a:any-link {
+  display: flex;
+  box-sizing: border-box;
+  width: 5em;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+header.cabecera-principal form {
+  display: flex;
+  align-items: center;
+  margin-right: 2em;
+  width: auto;
+}
+
+header.cabecera-principal form label {
+  height: 100%;
+  width: auto;
+  text-align: right;
+  cursor: pointer;
+  margin: 0% 0.3em;
+  display: flex;
+  align-items: center;
+}
+
+header.cabecera-principal form label img {
+  height: 77%;
+  object-fit: contain;
+}
+
+header.cabecera-principal form input[type="search"] {
+  height: 2.3em;
+  border-width: 0em;
+  border-radius: 1.15em;
+  padding: 0.1em 1.2em;
+}
+
+header.cabecera-principal form input[type="submit"] {
+  display: none;
+}
+
+#contenido-principal form {
+  width: 27em;
+  display: grid;
+  grid-template-columns: repeat(1, 2fr 2fr);
+  grid-gap: 0.5em 1em;
+  height: 44vh;
+}
+
+footer {
+  display: inline-block;
+  background-color: #6c733d;
+  color: white;
+  width: 100%;
+  min-height: 15vh;
+}
+
+footer #agradecimientos {
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 1em;
+  display: grid;
+  grid-row-gap: 0.5em;
+}
