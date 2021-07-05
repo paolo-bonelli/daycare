@@ -1,3 +1,7 @@
+CREATE DATABASE daycare;
+
+USE daycare;
+
 CREATE TABLE tipos_de_mascota(
   id_tipo INT NOT NULL AUTO_INCREMENT,
   nombre_tipo VARCHAR(20) NOT NULL,
@@ -16,9 +20,8 @@ CREATE TABLE mascotas(
   FOREIGN KEY (tipo_de_mascota) REFERENCES tipos_de_mascota(id_tipo)
   ON DELETE CASCADE ON UPDATE CASCADE
 );
-CREATE TABLE `swedxaja_pet-daycare`.`tipos_de_mascota` ( `id_tipo` INT NOT NULL ,  `nombre_tipo` VARCHAR(20) NOT NULL ,    PRIMARY KEY  (`id_tipo`)) ENGINE = InnoDB;
 
-INSERT INTO tipos_de_mascota(tipos_de_mascota) VALUES
+INSERT INTO tipos_de_mascota(nombre_tipo) VALUES
 ('Perro'), ('Gato'), ('Tortuga'),('Ave'),('Conejo'), ('Lagartija'),('Hamster'), ('Pez');
 
 INSERT INTO mascotas(nombre_mascota,tipo_de_mascota,raza,sexo,nombre_del_cliente,nacimiento) VALUES
