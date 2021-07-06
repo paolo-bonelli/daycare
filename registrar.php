@@ -1,6 +1,6 @@
-<?php include('./../templates/header.php'); ?>
+<?php include('./templates/header.php'); ?>
 
-<?php include('./../conexion.php'); ?>
+<?php include('./conexion.php'); ?>
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     echo "Fallo guardando el registro: " . mysqli_error($link);
   }
 
-  echo "<meta http-equiv='refresh' content='0;URL=" . $home . "'>";
+  echo "<meta http-equiv='refresh' content='0;URL=./'>";
 } else { ?>
 
   <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
@@ -62,4 +62,4 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     <input type="reset" value="Limipar">
   </form>
 <?php } ?>
-<?php include('./../templates/footer.php'); ?>
+<?php include('./templates/footer.php'); ?>

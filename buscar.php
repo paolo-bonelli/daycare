@@ -1,6 +1,6 @@
-<?php include('../templates/header.php'); ?>
+<?php include('./templates/header.php'); ?>
 
-<?php include('../conexion.php'); ?>
+<?php include('./conexion.php'); ?>
 
 <?php
 if (isset($_GET["busqueda"]) && $_GET["busqueda"] !== "") {
@@ -29,8 +29,8 @@ if (isset($_GET["busqueda"]) && $_GET["busqueda"] !== "") {
           <td><?php print $mascota[4]; ?></td>
           <td><?php print $mascota[5]; ?></td>
           <td><?php print $mascota[6]; ?></td>
-          <td><a href="<?php echo htmlspecialchars("{$home}editar/?id_mascota={$mascota[0]}"); ?>"><img src="" alt="">Editar</a></td>
-          <td><a href="<?php echo htmlspecialchars("{$home}eliminar/?id_mascota={$mascota[0]}"); ?>"><img src="" alt="">Eliminar</a></td>
+          <td><a href="./editar.php?id_mascota='<?php echo htmlspecialchars($mascota[0]) ?>'">Editar</a></td>
+          <td><a href="./eliminar.php?id_mascota='<?php echo htmlspecialchars($mascota[0]) ?>'">Eliminar</a></td>
         </tr>
       <?php } ?>
 
@@ -41,9 +41,6 @@ if (isset($_GET["busqueda"]) && $_GET["busqueda"] !== "") {
     <h2>No se econtró ninguna mascota</h2>
   <?php
   }
-
-  // Se libera el resultado
-  mysqli_free_result($mascotas);
 } else {
   ?>
   <h2>Debe ingresar un resultado</h2>
@@ -51,4 +48,4 @@ if (isset($_GET["busqueda"]) && $_GET["busqueda"] !== "") {
 }
 ?>
 
-<?php include('../templates/footer.php'); ?>
+<?php include('./templates/footer.php'); ?>

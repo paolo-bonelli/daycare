@@ -32,8 +32,8 @@ if (mysqli_num_rows($mascotas) > 0) {
         <td><?php print $mascota[4]; ?></td>
         <td><?php print $mascota[5]; ?></td>
         <td><?php print $mascota[6]; ?></td>
-        <td><a href="<?php echo htmlspecialchars('editar/?id_mascota=' . $mascota[0]) ?>"><img src="" alt="">Editar</a></td>
-        <td><a href="<?php echo htmlspecialchars('eliminar/?id_mascota=' . $mascota[0]) ?>"><img src="" alt="">Eliminar</a></td>
+        <td><a href="./editar.php?id_mascota='<?php echo htmlspecialchars($mascota[0]) ?>'">Editar</a></td>
+        <td><a href="./eliminar.php?id_mascota='<?php echo htmlspecialchars($mascota[0]) ?>'">Eliminar</a></td>
       </tr>
     <?php } ?>
   </table>

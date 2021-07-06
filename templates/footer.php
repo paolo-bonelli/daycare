@@ -5,7 +5,11 @@
     <div>Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/authors/good-ware" title="Flaticon">www.flaticon.com</a></div>
   </section>
 </footer>
-<?php mysqli_close($link); ?>
+<?php
+// Se libera el resultado
+mysqli_free_result($mascotas);
+// Se cierra la conexión con la base de datos
+mysqli_close($link); ?>
 </body>
 
 </html>

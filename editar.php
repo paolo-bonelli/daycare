@@ -1,6 +1,6 @@
-<?php include('./../templates/header.php'); ?>
+<?php include('./templates/header.php'); ?>
 
-<?php include('./../conexion.php'); ?>
+<?php include('./conexion.php'); ?>
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
   if (!mysqli_query($link, $sql)) {
     echo "Fallo guardando el registro: " . mysqli_error($link);
   } else {
-    echo "<meta http-equiv='refresh' content='0;URL=" . $home . "'>";
+    echo "<meta http-equiv='refresh' content='0;URL=./'>";
   }
 } else {
 ?>
@@ -86,4 +86,4 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 <?php }
 } ?>
 
-<?php include('./../templates/footer.php'); ?>
+<?php include('./templates/footer.php'); ?>
